@@ -69,7 +69,8 @@
             position: absolute;
             top: 10vh;
             left: 5vw;
-            font-size: clamp(1.2rem, 3.5vw, 2.5rem);
+            font-size: clamp(1.4rem, 3.5vw, 2.5rem);
+            letter-spacing: 0.2em;
             color: var(--gold);
             font-family: var(--font-primary);
         }
@@ -103,7 +104,7 @@
         .video-box img {
             max-width: 100%;
             max-height: 100%;
-            margin: auto;
+            margin: 0;
         }
 
         .video-box-header,
@@ -212,11 +213,23 @@
 
     <div class="video-box">
         <div class="video-box-header">HOT NEW RELEASES!</div>
-        <img src="assets/images/girl3.png" alt="girl3">
+        <img src="assets/images/player-girl1.png" alt="player-girl" id="player-girl-img">
         <div class="video-box-bar">
             <hr>
         </div>
     </div>
+    <script>
+        const images = [
+            "assets/images/player-girl1.png",
+            "assets/images/player-girl2.png",
+            "assets/images/player-girl3.png"
+        ];
+        let idx = 0;
+        setInterval(() => {
+            idx = (idx + 1) % images.length;
+            document.getElementById('player-girl-img').src = images[idx];
+        }, 1500);
+    </script>
 
     <div id="brandi">CLICK HERE TO SEE<br>BRANDI IN ACTION!!</div>
     <div id="girls-text">GIRLS!!<br>GIRLS!!<br>GIRLS!!</div>
