@@ -230,6 +230,12 @@
             document.getElementById('player-girl-img').src = images[idx];
         }, 1500);
     </script>
+    <script>
+        // audio sucks
+        const audio = new Audio('assets/audio/background.mp3');
+        audio.loop = true;
+        audio.play().catch(() => { });
+    </script>
 
     <div id="brandi">CLICK HERE TO SEE<br>BRANDI IN ACTION!!</div>
     <div id="girls-text">GIRLS!!<br>GIRLS!!<br>GIRLS!!</div>
